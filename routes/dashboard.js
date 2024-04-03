@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const { app, settings } = require("../controllers/dashboardController");
+const { dashboard, settings } = require("../controllers/dashboardController");
 const { login, signup } = require("../controllers/authController");
 
 /* GET dashboard page. */
-router.get("/", app);
+router.get("/", dashboard);
 
 router.get("/settings", settings);
 
